@@ -33,7 +33,7 @@ layout: default
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
-          <img src="img/bg-post.jpg" class = "img-fluid" >
+          <img src="img/bg-post.jpg" class = "img-fluid" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')" >
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
