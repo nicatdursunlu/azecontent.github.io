@@ -32,8 +32,7 @@ layout: default
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
         <article class="post-preview">
-          <img src="url('{{ post.background | prepend: site.baseurl | replace: '//', '/' }}')" class = "img-fluid">
-          <p> {{url('{{ post.background | prepend: site.baseurl | replace: '//', '/' }}')}} </p>
+          <img src=url('{{ post.background | prepend: site.baseurl | replace: '//', '/' }}') class = "img-fluid">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
