@@ -33,7 +33,7 @@ layout: default
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
-          <img src="img/bg-post.jpg"  width="480" height="240" >
+          <img src="img/bg-post.jpg" class = "img-responsive"  width="480" height="240" >
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
