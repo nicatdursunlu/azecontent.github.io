@@ -7,7 +7,7 @@ background: '/img/bg-post.jpg'
 {% for post in paginator.posts %}
 
 <article class="post-preview">
-  <img src="img/bg-post.jpg" class = "img-fluid">
+  <img src="/startbootstrap-clean-blog-jekyll/img/bg-post.jpg" class = "img-fluid">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
     {% if post.subtitle %}
