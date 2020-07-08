@@ -25,14 +25,14 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <ul>
+     
        
 
         {{ content }}
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
-        <li>
+      
           <div class="col-xs-12 col-sm-4 col-md-3">
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -59,7 +59,7 @@ layout: default
 
         <hr>
             </div>
-        </li>
+        
         {% endfor %}
     
         <!-- Pager -->
@@ -67,6 +67,6 @@ layout: default
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">Hamısını Göstər &rarr;</a>
         </div>
 
-      </ul>
+      
     </div>
   </div>
