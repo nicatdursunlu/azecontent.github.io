@@ -25,12 +25,15 @@ layout: default
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <ul>
+       
 
         {{ content }}
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
+        <li>
+          <div class="col-xs-12 col-sm-4 col-md-3">
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
@@ -55,14 +58,15 @@ layout: default
         </article>
 
         <hr>
-
+            </div>
+        </li>
         {% endfor %}
-
+    
         <!-- Pager -->
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">Hamısını Göstər &rarr;</a>
         </div>
 
-      </div>
+      </ul>
     </div>
   </div>
