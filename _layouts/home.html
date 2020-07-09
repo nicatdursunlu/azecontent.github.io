@@ -4,7 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}'); height: 18rem; ">
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -34,7 +34,7 @@ layout: default
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}">
+                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 18rem;" >
               </a>
               <div class="card-body" >
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
