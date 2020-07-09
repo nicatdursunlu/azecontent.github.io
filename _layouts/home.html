@@ -31,23 +31,25 @@ layout: default
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
       
-        <div class="col-lg-4 col-sm-6 mb-4 mb-4">
+        <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
+                <img class="rounded card-img-top" src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
               </a>
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                <h3 class="post-title">{{ post.title }}</h3>
-              </a>
-              <p class="post-meta">Posted by
-                {% if post.author %}
-                {{ post.author }}
-                {% else %}
-                {{ site.author }}
-                {% endif %}
-                on
-                {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-              </p>
+              <div class="card-body">
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                  <h4 class="card-title">{{ post.title }}</h4>
+                </a>
+                <p class="post-meta">Posted by
+                  {% if post.author %}
+                  {{ post.author }}
+                  {% else %}
+                  {{ site.author }}
+                  {% endif %}
+                  on
+                  {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+                </p>
+            </div>    
             </article>
 
             <hr>
