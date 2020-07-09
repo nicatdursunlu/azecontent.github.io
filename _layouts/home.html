@@ -32,12 +32,10 @@ layout: default
         {% for post in site.posts limit : 5 %}
       
         <div class="col-lg-4 col-sm-6 mb-4">
-            <article class="card-deck shadow">
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                <img class="rounded card-img-top" src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
-              </a>
+            <article class="card shadow">
               <div class="card-body">
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                  <img class="rounded card-img-top" src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
                   <h4 class="card-title">{{ post.title }}</h4>
                 </a>
                 <p class="post-meta">Posted by
