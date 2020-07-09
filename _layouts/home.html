@@ -38,8 +38,7 @@ layout: default
               </a>
               <div class="card-body">
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                  <img class="rounded card-img-top" src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
-                  <h4 class="card-title">{{ post.title }}</h4>
+                   <h4 class="card-title">{{ post.title }}</h4>
                 </a>
                 <p class="post-meta">Posted by
                   {% if post.author %}
