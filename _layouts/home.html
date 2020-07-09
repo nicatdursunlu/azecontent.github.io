@@ -38,7 +38,7 @@ layout: default
               </a>
               <div class="card-body h-100">
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                   <h4 class="card-title">{{ post.title }}</h4>
+                   <h4 class="card-title text-truncate">{{ post.title }}</h4>
                 </a>
                 <p class="post-meta">Posted by
                   {% if post.author %}
