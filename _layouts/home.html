@@ -32,7 +32,7 @@ layout: default
         {% for post in site.posts limit : 5 %}
       
         <div class="col-lg-4 col-sm-6 mb-4 mb-4">
-            <article class="post-preview">
+            <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                 <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
               </a>
