@@ -25,14 +25,14 @@ layout: default
 
  <section class="section"> 
   <div class="container">
-    <div class="card">
+    <div class="card-deck d-flex">
         {{ content }}
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 6 %}
       
         <div class="col-lg-4 col-sm-6 mb-4">
-            <article class="card shadow d-flex">
+            <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                   <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class = "img-fluid">
               </a>
