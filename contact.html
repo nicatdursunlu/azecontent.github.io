@@ -9,15 +9,15 @@ form: true
 <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/{{site.email}}" method="post">
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-    <label for="message">Message</label>
-    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+    <label for="full-name">Ad və Soyad</label>
+    <input type="text" name="name" id="full-name" placeholder="Ad və Soyad" required="">
+    <label for="email-address">Email</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+    <label for="message">Mesaj Mətni</label>
+    <textarea rows="5" name="message" id="message" placeholder="Mesaj" required=""></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
   </fieldset>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" class="btn btn-primary">
 </form><style>/* reset */
 #fs-frm input,
 #fs-frm select,
