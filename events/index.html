@@ -7,7 +7,7 @@ background: '/img/bg-post.jpg'
     <div class="card-deck">
         <!-- Home Post List -->
         {% for post in paginator.posts %}
-        {% if post.type == false %}
+        {% if post.type == "event" %}
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
