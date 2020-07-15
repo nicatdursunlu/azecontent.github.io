@@ -1,28 +1,22 @@
----
-layout: page
-title: Bizimlə Əlaqə
-description: 
-background: '/img/bg-contact.jpg'
-form: true
----
-
-<p class="text-center" > Hər hansı bir təklif, irad və ya sualınız var? <br>
-  Buyurun, aşağıdakı mesaj bölməsindən bizimlə əlaqə saxlaya bilərsiniz.</p>
-<div class = "container">
-<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/{{site.email}}" method="post">
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    
+<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/YOUR_EMAIL_HERE" method="post">
   <fieldset id="fs-frm-inputs">
-    <label for="full-name">Ad və Soyad</label>
-    <input type="text" name="name" id="full-name" placeholder="Ad və Soyad" required="">
-    <label for="email-address">Email</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
-    <label for="message">Mesaj Mətni</label>
-    <textarea rows="5" name="message" id="message" placeholder="Mesaj" required=""></textarea>
+    <label for="full-name">Full Name</label>
+    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+    <label for="email-address">Email Address</label>
+    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+    <label for="message">Message</label>
+    <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
     <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
   </fieldset>
-  <button type="submit" class="btn btn-primary">Göndər</button>
-</form>
-</div>  
-<style>/* reset */
+  <input type="submit" value="Submit">
+</form><style>/* reset */
 #fs-frm input,
 #fs-frm select,
 #fs-frm textarea,
@@ -130,3 +124,7 @@ form: true
   margin-right: 3%;
 }
 </style>
+
+</body>
+</html> 
+

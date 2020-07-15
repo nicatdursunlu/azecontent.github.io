@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Məqalələr
+title: Bütün Yazılar
 background: '/img/bg-post.jpg'
 ---
+
+
 <div class="container">
     <div class="card-deck">
         <!-- Home Post List -->
-        {% for post in paginator.posts %}
-        {% if post.type == "article" %}
+        {% for post in site.posts %}
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -27,10 +28,10 @@ background: '/img/bg-post.jpg'
                   {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
                 </p>
             </div>    
+                
             </article>
             <hr>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
   </div>

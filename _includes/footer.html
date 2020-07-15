@@ -2,21 +2,14 @@
 
 <hr>
 
-<footer>
-  <div class="container">
+<footer class="bg-dark py-5">
+  <div class="container container-lg">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-md-4">
+        
+      </div>
+      <div class="col-md-4">
         <ul class="list-inline text-center">
-          {% if site.email %}
-          <li class="list-inline-item">
-            <a href="mailto:{{ site.email | encode_email }}">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          {% endif %}
           {% if site.twitter_username %}
           <li class="list-inline-item">
             <a href="https://twitter.com/{{ site.twitter_username }}">
@@ -68,8 +61,32 @@
           </li>
           {% endif %}
         </ul>
-        <p class="copyright text-muted">Copyright &copy; {{ site.author }} {{ 'now' | date: "%Y" }}</p>
+        <p class="copyright text-white">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}.  Bütün hüquqlar qorunur.</p>
       </div>
+      <div class="col-md-4">
+  <div class="subscribe-box">
+    <div class="display-4 text-white"> 
+      <i class="icon-Mail-3">
+      </i>
+    </div>
+    <p class="text-white" >Yeniliklərdən Xəbərdar Olun</p>
+    <form lpformnum="1" action="https://github.us10.list-manage.com/subscribe/post?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e" method="post">
+      <div class=""> 
+        <input class="form-control required email" id="mce-EMAIL" name="EMAIL" placeholder="Email" type="email" value="">
+      </div>
+      <button class="btn-sm btn-success text-white mt-2">Abunə Olun</button> 
+    </form>
+  </div>
+</div>
+
     </div>
   </div>
 </footer>
+<style>
+  .subscribe-box {
+    background: rgba(120,130,140,0.13);
+    padding: 25px;
+    border-radius: 4px;
+  }
+</style>
+
