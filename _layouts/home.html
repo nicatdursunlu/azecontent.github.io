@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: home
+background: '/img/bg-index.jpg'
 ---
-
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -30,7 +30,7 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        {% for post in paginator.posts limit : 18 %}
+        {% for post in site.posts limit : 18 %}
       
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
