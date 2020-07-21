@@ -17,8 +17,10 @@ layout: default
             {% if page.description %}
             <span class="subheading">{{ page.description }}</span>
             {% endif %}
+            <div class="text-center">
+            {% include category.html %}
+            </div>
           </div>
-           {% include category.html %}
         </div>
       </div>
     </div>
