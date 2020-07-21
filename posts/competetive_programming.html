@@ -1,0 +1,58 @@
+---
+layout: article_page
+title: Məqalələr
+background: '/img/bg-post.jpg'
+---
+<div class="container">
+    <div class="card-deck">
+        <!-- Home Post List -->
+        {% for post in site.posts %}
+        {% if post.type == "article" and post.category contains "programming" %}
+        <div class="col-lg-4 col-sm-6 mb-4">
+            <article class="card shadow">
+              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
+              </a>
+              <div class="card-body" >
+                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                   <h4 class="card-title text-truncate">{{ post.title }}</h4>
+                </a>
+                <p class="post-meta">Posted by
+                  {% if post.author %}
+                  {{ post.author }}
+                  {% else %}
+                  {{ site.author }}
+                  {% endif %}
+                  on
+                  {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+                </p>
+            </div>    
+            </article>
+            <hr>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+  </div>
+
+<hr>
+
+
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+    Yeni<span class="d-none d-md-inline"> Məqalələr</span></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Köhnə<span class="d-none d-md-inline"> Məqalələr</span> &rarr;</a>
+  {% endif %}
+
+</div>
+
+{% endif %}
