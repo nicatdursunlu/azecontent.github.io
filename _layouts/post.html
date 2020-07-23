@@ -5,7 +5,6 @@ layout: article_view
 <!-- Page Header -->
 
  <div class="container">
-     <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
@@ -19,6 +18,7 @@ layout: article_view
               content=page.content %}
             </span>
           </div>
+          <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
         </div>
       </div>
     </div>
