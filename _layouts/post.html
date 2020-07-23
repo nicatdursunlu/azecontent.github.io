@@ -12,13 +12,13 @@ layout: article_view
             {% if page.subtitle %}
             <h2 class="subheading font-weight-bold">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
+          </div>
+          <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
+         <span class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
-            </span>
-          </div>
-          <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
+         </span>
         </div>
       </div>
     </div>
