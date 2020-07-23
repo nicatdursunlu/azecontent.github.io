@@ -14,10 +14,9 @@ layout: article_view
             {% endif %}
           </div>
           <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
-         <span class="meta text-center">Posted by
-              <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
-              content=page.content %}
+         <span class="meta text-center"> 
+              {{ page.date | date: '%B %d, %Y' }} &middot; 
+              {% include read_time.html content=page.content %}
          </span>
         </div>
       </div>
