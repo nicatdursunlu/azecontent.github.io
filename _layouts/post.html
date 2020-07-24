@@ -6,7 +6,7 @@ layout: article_view
 
  <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-8 ">
           <div class="post-heading">
             <h1 class="font-weight-bold">{{ page.title }}</h1>
             {% if page.subtitle %}
@@ -24,7 +24,7 @@ layout: article_view
 <hr>
 <div class="container"> 
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="col-lg-8">
 
         {{ content }}
 
@@ -40,9 +40,42 @@ layout: article_view
           <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Növbəti<span class="d-none d-md-inline">
               Məqalə</span> &rarr;</a>
           {% endif %}
-
+        </div>
+      </div>
+     <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Categories</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">Web Design</a>
+                  </li>
+                  <li>
+                    <a href="#">HTML</a>
+                  </li>
+                  <li>
+                    <a href="#">Freebies</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="#">JavaScript</a>
+                  </li>
+                  <li>
+                    <a href="#">CSS</a>
+                  </li>
+                  <li>
+                    <a href="#">Tutorials</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>
     </div>
   </div>
