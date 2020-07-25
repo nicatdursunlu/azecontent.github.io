@@ -42,7 +42,7 @@ layout: default
                 </a>
               <div class="card-body" >
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                   <h4 class="card-title font-weight-bold line-clamp">{{ post.title }}</h4>
+                   <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
                 </a>
                 <p class="post-meta">Posted by
                   {% if post.author %}
@@ -71,6 +71,11 @@ layout: default
      display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
+    }
+    .module {
+      width: 250px;
+      margin: 0 0 1em 0;
+      overflow: hidden;
     }
   </style>  
     
