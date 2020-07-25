@@ -21,14 +21,8 @@ background: '/img/bg-post.jpg'
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                    <h4 class="card-title text-truncate font-weight-bold">{{ post.title }}</h4>
                 </a>
-                <p class="post-meta">Posted by
-                  {% if post.author %}
-                  {{ post.author }}
-                  {% else %}
-                  {{ site.author }}
-                  {% endif %}
-                  on
-                  {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+                <p class="post-meta">
+                  {{ post.date | date: '%m %d, %Y' }}            
                 </p>
             </div>    
             </article>
