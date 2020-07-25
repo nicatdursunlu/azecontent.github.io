@@ -44,13 +44,7 @@ layout: default
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                    <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
                 </a>
-                <p class="post-meta">Posted by
-                  {% if post.author %}
-                  {{ post.author }}
-                  {% else %}
-                  {{ site.author }}
-                  {% endif %}
-                  on
+                <p class="post-meta">
                   {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
                 </p>
             </div>    
