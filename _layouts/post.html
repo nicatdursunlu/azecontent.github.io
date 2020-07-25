@@ -8,10 +8,7 @@ layout: article_view
       <div class="row">
         <div class="col-lg-8 ">
           <div class="post-heading">
-            <h1 class="font-weight-bold mt-4">{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading font-weight-bold">{{ page.subtitle }}</h2>
-            {% endif %}
+            <h2 class="font-weight-bold mt-4">{{ page.title }}</h2>
           </div>
           <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
          <span class="meta text-center"> 
@@ -19,42 +16,6 @@ layout: article_view
               {% include read_time.html content=page.content %}
          </span>
          <hr>
-        </div>
-       <div class="col-md-4">
-         <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
     </div>
