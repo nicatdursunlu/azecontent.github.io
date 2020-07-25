@@ -10,6 +10,7 @@ background: '/img/bg-post.jpg'
         {% if post.type == "video" %}
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
+               <div class="inner"> 
               <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                   {% if post.video_link  %}
                   <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/0.jpg" style="height: 10rem;">
@@ -17,6 +18,7 @@ background: '/img/bg-post.jpg'
                   <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
                   {% endif %}
                 </a>
+               </div>    
               <div class="card-body" >
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                    <h4 class="card-title text-truncate font-weight-bold">{{ post.title }}</h4>
@@ -41,7 +43,15 @@ background: '/img/bg-post.jpg'
 
 <hr>
 
+</style>
+.inner{
+ overflow: hidden;
+}
+.inner img{
+ transform: scale(1.5);
+}
 
+<style>
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
