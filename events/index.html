@@ -10,8 +10,14 @@ background: '/img/bg-post.jpg'
         {% if post.type == "video" %}
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow">
-              <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                  {% if post.video_link  %}
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{ post.video_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   </div>
+                  {% else %}
                   <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
+                  {% endif %}
               </a>
               <div class="card-body" >
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
