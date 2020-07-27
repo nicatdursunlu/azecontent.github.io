@@ -25,10 +25,11 @@ layout: article_view
 
         {{ content }}
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
+       <div class="addthis_inline_share_toolbox">
          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
- 
+       </div>
         <hr>
-       
+        <h3 class="text-center">Əlaqəli Postlar<h3>
         <div class="card-deck">
         <!-- Related Post List -->
         {% for post in site.posts limit : 18 %}
