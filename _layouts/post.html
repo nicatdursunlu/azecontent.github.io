@@ -11,10 +11,6 @@ layout: article_view
             <h2 class="font-weight-bold mt-4">{{ page.title }}</h2>
           </div>
           <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
-         <span class="meta text-center"> 
-              {{ page.date | date: '%B %d, %Y' }} &middot; 
-              {% include read_time.html content=page.content %}
-         </span>
          <hr>
         </div>
       </div>
@@ -25,6 +21,7 @@ layout: article_view
 
         {{ content }}
            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+           <p>{{ page.date | date: '%m %d, %Y' }}</p>
            <div class="addthis_inline_share_toolbox mt-4 d-flex justify-content-end">
              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
            </div>
