@@ -44,7 +44,7 @@ layout: article_view
                     </a>
                   <div class="card-body" >
                     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                       <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
+                       <h4 class="card-title font-weight-bold text-truncate">{{ post.title }}</h4>
                     </a>
                     <p class="post-meta">
                       {{ post.date | date: '%m.%d.%Y' }}          
