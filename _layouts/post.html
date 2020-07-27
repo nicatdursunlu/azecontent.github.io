@@ -28,36 +28,30 @@ layout: article_view
         <hr>
     
       </div>
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
-    </div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
+      </div>
         <div class="card-deck">
-        {{ content }}
-
-        <!-- Home Post List -->
+        <!-- Related Post List -->
         {% for post in site.posts limit : 18 %}
-      
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <article class="card shadow">
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                  {% if post.video_link  %}
-                  <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
-                  {% else %}
-                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
-                  {% endif %}
-                </a>
-              <div class="card-body" >
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                   <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
-                </a>
-                <p class="post-meta">
-                  {{ post.date | date: '%m.%d.%Y' }}          
-                </p>
-            </div>    
-            </article>
-
-            <hr>
-        </div>
-        
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <article class="card shadow">
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                      {% if post.video_link  %}
+                      <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
+                      {% else %}
+                      <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
+                      {% endif %}
+                    </a>
+                  <div class="card-body" >
+                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                       <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
+                    </a>
+                    <p class="post-meta">
+                      {{ post.date | date: '%m.%d.%Y' }}          
+                    </p>
+                </div>    
+                </article>
+            </div>
         {% endfor %}
     </div>
   </div>
