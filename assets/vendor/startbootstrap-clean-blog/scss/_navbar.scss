@@ -1,6 +1,6 @@
 // Styling for the navbar
 #mainNav {
-  position:  static;//absolute;
+  position:  fixed;//absolute;
   border-bottom: 1px solid $gray-200;
   background-color: white;
   @include sans-serif-font;
