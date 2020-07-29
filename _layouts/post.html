@@ -32,52 +32,6 @@ layout: article_view
         <div class="card-deck">
         <!-- Related Post List -->
         {% include related_posts.html %} 
-      <!--  {% assign maxRelated = 100 %}
-{% assign minCommonTags =  1 %}
-{% assign maxRelatedCounter = 0 %}
-
-{% for post in site.posts %}
-
-    {% assign sameTagCount = 0 %}
-    {% assign commonTags = '' %}
-
-    {% for category in post.categories %}
-      {% if post.url != page.url %}
-        {% if page.categories contains category %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
-          {% assign commonTags = commonTags | append: tagmarkup %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-
-    {% if sameTagCount >= minCommonTags %}
-      <div class="col-lg-4 col-sm-6 mb-4">
-                <article class="card shadow">
-                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                      {% if post.video_link  %}
-                      <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
-                      {% else %}
-                      <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
-                      {% endif %}
-                    </a>
-                  <div class="card-body" >
-                    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                       <h4 class="card-title font-weight-bold text-truncate">{{ post.title }}</h4>
-                    </a>
-                    <p class="post-meta">
-                      {{ post.date | date: '%m.%d.%Y' }}          
-                    </p>
-                </div>    
-               </article>
-         </div>
-      {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-      {% if maxRelatedCounter >= maxRelated %}
-        {% break %}
-      {% endif %}
-    {% endif %}
-
-  {% endfor %}    -->      
         </div>
       
       </div>
