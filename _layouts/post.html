@@ -26,14 +26,14 @@ layout: article_view
              <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
            </div>
         <hr>
-       
+       {{page.categories}}
    
         <h3 class="text-center font-weight-bold mt-5">Oxşar Postlar </h3>
         <div class="card-deck">
         <!-- Related Post List -->
           
          {% assign maxRelated = 4 %}
-{% assign minCommonTags =  2 %}
+{% assign minCommonTags =  1 %}
 {% assign maxRelatedCounter = 0 %}
 
 {% for post in site.posts %}
