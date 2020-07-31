@@ -54,13 +54,73 @@
           <a class="nav-link font-weight-bold" href="{{"/contact"}}">Əlaqə</a>
         </li>
         <li class="nav-item">
-          <!--<div class="d-flex justify-content-start" > -->
-          <!--  <input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" /> -->
             <i class="nav-link fas fa-search"></i>
-          <!-- </div> --> 
-        </li>
+            <div class="search-box">
+    		      <script async src="https://cse.google.com/cse.js?cx=006956435325746359751:53dmzemhe0e"></script>
+              <div class="gcse-search"></div>
+  		      </div>
+         </li>
         
       </ul>
     </div>
   </div>
 </nav>
+<style>
+.search-box{
+  background: #E8E8E4;
+  position: absolute;
+  top: 54px;
+  right: 28.7%;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-top:4px solid #D80B15;
+  display: none;
+}
+
+ .search-box:before{
+  content: "";
+  position: absolute;
+  top: -32px;
+  right: 13px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid #D80B15;
+}
+
+.search-box input[type="text"]{
+  width: 200px;
+  padding: 5px 10px;
+  margin-left: 23px;
+  border: 1px solid #D80B15;
+  outline: none;
+}
+
+.search-box input[type="button"]{
+  width: 80px;
+  padding: 5px 0;
+  background: #D80B15;
+  color: #fff;
+  margin-left: -6px;
+  border: 1px solid #D80B15;
+  outline: none;
+  cursor: pointer;
+}
+  
+</style>
+
+<script>
+$(document).ready(function() {
+     
+		    $(".fa-search").click(function() {
+		       $(".search-box").toggle();
+		       $("input[type='text']").focus();
+		     });
+ 
+ 		});
+</script>
+
+  
+
