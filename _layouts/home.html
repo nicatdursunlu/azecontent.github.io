@@ -12,6 +12,9 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
+            <form>
+              <input type="text" name="search" placeholder="Search..">  
+            </form>
             <h1>{{ site.title }}</h1>
             {% if site.description %}
             <span class="subheading font-weight-bold">{{ site.description }}</span>
@@ -57,3 +60,21 @@ layout: default
           <a class="btn btn-primary float-right" href="{{"/all" | relative_url }}">Hamısını Göstər &rarr;</a>
         </div>
   </div>
+  <style> 
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+ }
+
+input[type=text]:focus {
+  width: 100%;
+}
+</style>
