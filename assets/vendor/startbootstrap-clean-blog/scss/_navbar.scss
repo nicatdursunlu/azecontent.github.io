@@ -11,6 +11,24 @@
      overflow: hidden;
 }  
 
+
+input[type=text] {
+  width: 65%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: transparent;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+ }
+
+input[type=text]:focus {
+  width: 65%;
+  outline:0;
+}
+
 #mainNav {
   position:  relative;//absolute;
   border-bottom: 1px solid $gray-200;
