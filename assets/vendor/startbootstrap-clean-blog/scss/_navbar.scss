@@ -1,5 +1,32 @@
 // Styling for the navbar
 
+.search-widget {
+  border: 1px solid #858585;
+  display: block;
+  height: 35px;
+  float: left;
+  border-radius:25px;
+}
+
+.search-widget input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  height: 35px;
+}
+
+.search-widget button {
+  background-color: transparent;
+  color: #1293D4;
+  border: 0;
+  height: 35px;
+}
+
+
+
+
 .line-clamp {
      display: -webkit-box;
     -webkit-line-clamp: 2;
