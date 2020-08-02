@@ -151,7 +151,7 @@ input[type=text]:focus {
       .navbar-nav {
         > li.nav-item {
           > a,i {
-            color: $gray-900;
+            color: white ;// $gray-900;
             &:focus,
             &:hover {
               color: $primary;
