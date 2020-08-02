@@ -1,7 +1,7 @@
 // Styling for the navbar
 
 .search-widget {
-  border: 1px solid #858585;
+  border: 1px solid white;
   display: block;
   height: 35px;
   //float: left;
@@ -43,7 +43,7 @@
 input[type=text] {
   width: 90%;
   box-sizing: border-box;
-  border: 2px solid #ccc;
+  border: transparent;
   border-radius: 25px;
   font-size: 16px;
   background-color: transparent;
