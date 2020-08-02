@@ -10,7 +10,7 @@ layout: article_view
           <div class="post-heading">
             <h2 class="font-weight-bold mt-4">{{ page.title }}</h2>
             {% if page.subtitle %}
-            <h2 class="subheading font-weight-bold">{{ page.subtitle }}</h2>
+            <p class="subheading">{{ page.subtitle }}</p>
             {% endif %}
           </div>
           <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl | replace: '//', '/' }}">
