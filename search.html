@@ -3,11 +3,16 @@ layout: page
 ---
 <div class="container text-center mb-3 ">
   
-               <form action="/search.html" method="get"> 
+               <!--<form action="/search.html" method="get"> 
                   <input type="text" name="query" placeholder="Axtarış..." style="color:black;">  
                   <button> <i type="submit" value="search" class="fa fa-search" aria-hidden="true" style="background: transparent; color:black;"></i> </button>
                  <!-- <input type="submit" value="search"> -->
-               </form> 
+               <!--</form> -->
+  <form action="/search.html" method="get">
+  <input type="text" id="search-box" name="query">
+  <input type="submit" value="search">
+</form>
+  
   
 </div>
 <ul id="search-results"></ul>
