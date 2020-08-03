@@ -13,11 +13,17 @@ layout: default
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
            <div class="search-widget"> 
-               <form action="/search.html" method="get"> 
+              <!-- <form action="/search.html" method="get"> 
                   <input type="text" name="query" placeholder="Axtarış..." style="color:white;">  
                   <button> <i type="submit" value="search" class="fa fa-search" aria-hidden="true" style="background: transparent; color:white;"></i> </button>
                  <!-- <input type="submit" value="search"> -->
-               </form> 
+             <!--  </form>  -->
+             <form class="search_box" action="/search.html" method="get">
+                  <input type="text" id="search-box" name="query">
+                <!--  <input type="submit" value="search"> -->
+                  <button> <i class="fas fa-search"></i> </button>
+             </form>
+             
             </div> 
             <h1>{{ site.title }}</h1>
             {% if site.description %}
