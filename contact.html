@@ -8,7 +8,7 @@ form: true
 
 <p class="text-center" > Hər hansı təklif, irad və ya istəyiniz var? <br>
   Buyurun, aşağıdakı mesaj bölməsindən bizimlə <br>  əlaqə  saxlaya bilərsiniz.</p>
-<div class = "container-sm">
+<div class = "wrapper">
 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/{{site.email}}" method="post">
   <fieldset id="fs-frm-inputs">
     <label for="full-name">Ad və Soyad</label>
@@ -23,6 +23,15 @@ form: true
 </form>
 </div>  
 <style>/* reset */
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 960px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}  
 #fs-frm input,
 #fs-frm select,
 #fs-frm textarea,
