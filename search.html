@@ -33,7 +33,7 @@ layout: page
 	<form style="max-width:100%;" class="search_box" action="/search.html" method="get">
 	  <input type="text" id="search-box" name="query">
 	<!--  <input type="submit" value="search"> -->
-	  <button> <i class="fas fa-search"></i> </button>
+	  <button class="nobtn"> <i class="fas fa-search"></i> </button>
 	</form>
   
 </div>
@@ -48,6 +48,10 @@ layout: page
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+}
+
+.nobtn{
+  border:transparent; // check this out later		
 }
 
 .wrapper{
