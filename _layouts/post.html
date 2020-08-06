@@ -74,12 +74,13 @@ layout: article_view
   var len = rows.length;
   var cnt = 0;
   console.log(curPath);
-  console.lof(curFile);
+  console.log(curFile);
   for (var i = 0; i < len; ++i) {
     var gaPath = rows[i][0];
     var gaFile = gaPath.slice(gaPath.lastIndexOf('/') + 1);
+    console.log('inside loop');
     console.log(gaPath);
-    console.lof(gaFile);
+    console.log(gaFile);
 
     if (gaPath === curPath || gaFile === curFile) {
       cnt += parseInt(rows[i][1]);
