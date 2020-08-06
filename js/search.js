@@ -7,8 +7,9 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3 class="font-weight-bold">' + item.title + '</h3></a>';
+        //appendString += '<li><a href="' + item.url + '"><h3 class="font-weight-bold">' + item.title + '</h3></a>';
         //appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        appendString += '<article class="card shadow h-100"> <a href="{{ item.url | prepend: site.baseurl | replace: '//', '/' }}"> {% if item.video_link %} <img class="rounded card-img-top" src="https://img.youtube.com/vi/{{item.video_link}}/mqdefault.jpg" style="height: 10rem;"> {% else %} <img class="rounded card-img-top" src="{{ item.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;"> {% endif %} </a> <div class="card-body" > <a href="{{ item.url | prepend: site.baseurl | replace: '//', '/' }}"> <h4 class="card-title font-weight-bold line-clamp module">{{ item.title }}</h4> </a> <p class="post-meta"> {{ item.date | date: '%m.%d.%Y' }} </p> </div> </article>)';
       }
 
       searchResults.innerHTML = appendString;
