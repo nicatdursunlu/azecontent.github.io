@@ -68,9 +68,9 @@ layout: article_view
     return;
   }
 
-  var curPath = window.location.pathname;
-  var curFile = curPath.slice(curPath.lastIndexOf('/') + 1); // Sometimes posts will be moved.
-
+  var curPath = decodeURI(window.location.pathname);
+  var curFile = decodeURI(curPath.slice(curPath.lastIndexOf('/') + 1)); // Sometimes posts will be moved.
+  
   var len = rows.length;
   var cnt = 0;
   console.log(curPath);
