@@ -28,6 +28,9 @@ layout: article_view
               <div class="mr-auto p-2">	
                 <p>{{ page.date | date: '%m.%d.%Y' }}</p>
               </div>
+               <div class="mr-auto p-2">	
+                <span id="pageviews"></span>
+              </div>
               <div class="p-2 mt-4">	
                  <div class="addthis_inline_share_toolbox">
                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
@@ -46,3 +49,40 @@ layout: article_view
       </div>
     </div>    
  </div>
+<script>
+ $.ajax({
+  url: '	https://azecontent.appspot.com/query?id=agxzfmF6ZWNvbnRlbnRyFQsSCEFwaVF1ZXJ5GICAgOjXh4EKDA', // Replace with SuperProxy Public endpoint
+  dataType: 'jsonp', // for cross-origin access
+
+  timeout: 1000 * 10, // 10 secs
+
+  success: function(data) {
+    displayPageviews(data.rows); // Do what ever you want.
+  },
+  error: function() {
+    console.log('Failed to load Pageviews!');
+  }
+});
+ function displayPageviews(rows) {
+  if (rows === undefined) {
+    return;
+  }
+
+  var curPath = window.location.pathname;
+  var curFile = curPath.slice(curPath.lastIndexOf('/') + 1); // Sometimes posts will be moved.
+
+  var len = rows.length;
+  var cnt = 0;
+
+  for (var i = 0; i < len; ++i) {
+    var gaPath = rows[i][0];
+    var gaFile = gaPath.slice(gaPath.lastIndexOf('/') + 1);
+
+    if (gaPath === curPath || gaFile === curFile) {
+      cnt += parseInt(rows[i][1]);
+    }
+  }
+
+  $('#pageviews').text(cnt);
+}
+</script> 
