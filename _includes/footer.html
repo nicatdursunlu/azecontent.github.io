@@ -135,6 +135,8 @@ function register($form) {
         $('#subscribe-result').css('color', '#ff8282')
 	if(data.msg.includes('Artıq')){
 		$('#subscribe-result').html('<p>' + data.msg + '</p>')
+	}else{
+	   $('#subscribe-result').html('Qeyd edilmiş email ünvanı səhvdir')	
 	}
         
       }
