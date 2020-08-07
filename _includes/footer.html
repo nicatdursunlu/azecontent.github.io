@@ -65,7 +65,7 @@
       </div>
       <div class="col-md-4">
      <div class="subscribe-box">
-        <p class="text-white" >Yeniliklərdən Xəbərdar Olun</p>
+        <p class="text-white" id="subscribe-result" >Yeniliklərdən xəbərdar olmaq istəyirsiniz?</p>
         
             <form action="https://github.us10.list-manage.com/subscribe/post-json?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e&c=?"
                 method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
@@ -74,8 +74,8 @@
                     <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
                 </div>
                 <input type="submit" value="Abunə Olun" name="subscribe" id="mc-embedded-subscribe" class="mc-button mt-3 ">
-                <div id="subscribe-result">
-                </div>
+               <!-- <div id="subscribe-result">
+                </div> -->
             </form>
     </div>
 </div>
@@ -113,7 +113,7 @@ function register($form) {
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ffffff')
         $('#subscribe-result').css('color', 'rgb(53, 114, 210)')
-        $('#subscribe-result').html('<p>Abuna olduğunuz üçün təşəkkür edirik.</p>')
+        $('#subscribe-result').html('Abuna olduğunuz üçün təşəkkür edirik.')
         $('#mce-EMAIL').val('')
       } else {
         // Something went wrong, do something to notify the user.
