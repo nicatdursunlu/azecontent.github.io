@@ -109,6 +109,11 @@ $(document).ready(function () {
 
 function register($form) {
   $('#mc-embedded-subscribe').val('Göndərilir...');
+  var $input = $('#mce-EMAIL')
+  if(validateEmail($input)===false){
+  	$('#subscribe-result').html('Yanlış email ünvanı');
+  }else{
+  
   $.ajax({
     type: $form.attr('method'),
     url: $form.attr('action'),
@@ -136,7 +141,7 @@ function register($form) {
         $('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>')
       }
     }
-  })
+  })}
 };
 // <!-- url: 'https://github.us10.list-manage.com/subscribe/post?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e', -->
 // https://github.us10.list-manage.com/subscribe/post?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e
