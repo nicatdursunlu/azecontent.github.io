@@ -88,10 +88,8 @@
 function validateEmail(emailField){
 	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
-        if (reg.test(emailField.value) == false) 
+        if (reg.test(emailField.value) === false) 
         {
-            $('#subscribe-result').css('color', 'rgb(255,0,0)')
-	    $('#subscribe-result').html('Yanlış email unvanı.')
             return false;
         }
 
@@ -106,8 +104,10 @@ $(document).ready(function () {
   if ($form.length > 0) {
     $('form input[type="submit"]').bind('click', function (event) {
       if (event) event.preventDefault()
-      if (validateEmail($input)){	    
+      if (validateEmail($input) == true){	    
       	register($form)
+      }else{
+       $('#subscribe-result').html('Yanlış email unvanı.')
       }
     })
   }
