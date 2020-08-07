@@ -133,7 +133,10 @@ function register($form) {
         
         $('#mce-EMAIL').css('borderColor', '#ff8282')
         $('#subscribe-result').css('color', '#ff8282')
-        $('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>')
+	if(data.msg.includes('Artıq')){
+		$('#subscribe-result').html('<p>' + data.msg + '</p>')
+	}
+        
       }
     }
   })
