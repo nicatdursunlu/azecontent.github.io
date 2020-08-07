@@ -85,17 +85,6 @@
 </footer>
 
 <script>
-function validateEmail(emailField){
-	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-        if (reg.test(emailField.value) === false) 
-        {
-            return false;
-        }
-
-        return true;
-
-}
 
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
@@ -124,7 +113,7 @@ function register($form) {
         console.log(data.msg)
         $('#mce-EMAIL').css('borderColor', '#ffffff')
         $('#subscribe-result').css('color', 'rgb(53, 114, 210)')
-        $('#subscribe-result').html('Abunə olduğunuz üçün təşəkkür edirik.')
+        $('#subscribe-result').html('Abunə olduğunuz üçün təşəkkür edirik!')
         $('#mce-EMAIL').val('')
       } else {
         // Something went wrong, do something to notify the user.
