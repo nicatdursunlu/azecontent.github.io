@@ -90,7 +90,8 @@ function validateEmail(emailField){
 
         if (reg.test(emailField.value) == false) 
         {
-            alert('Yanlış email unvanı');
+            $('#subscribe-result').css('color', 'rgb(255,0,0)')
+	    $('#subscribe-result').html('Yanlış email unvanı.')
             return false;
         }
 
