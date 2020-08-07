@@ -101,15 +101,13 @@ $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
   var $input = $('#mce-EMAIL')
   
-  if ($form.length > 0) {
+  if (validateEmail($input)==true) {
     $('form input[type="submit"]').bind('click', function (event) {
-      if (event) event.preventDefault()
-      if (validateEmail($input) == true){	    
+      if (event) event.preventDefault()    
       	register($form)
-      }else{
-       $('#subscribe-result').html('Yanlış email unvanı.')
-      }
-    })
+      })
+  }else{
+	$('#subscribe-result').html('Yanlış email ünvanı')
   }
 })
 
