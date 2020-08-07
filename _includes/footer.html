@@ -69,7 +69,7 @@
         
             <form action="https://github.us10.list-manage.com/subscribe/post-json?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e&c=?"
                 method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
-                <input onblur="validateEmail(this);"  type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+                <input  type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
                     <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
                 </div>
@@ -101,10 +101,14 @@ function validateEmail(emailField){
 
 $(document).ready(function () {
   var $form = $('#mc-embedded-subscribe-form')
+  var $input = $('#mce-EMAIL')
+  
   if ($form.length > 0) {
     $('form input[type="submit"]').bind('click', function (event) {
       if (event) event.preventDefault()
-      register($form)
+      if (validateEmail($input)){	    
+      	register($form)
+      }
     })
   }
 })
