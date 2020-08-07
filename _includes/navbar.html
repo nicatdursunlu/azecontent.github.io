@@ -1,69 +1,81 @@
+
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" >
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{"/"}}"> {{ site.title | escape}} </a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+   <div class="container-fluid">
+      <a class="navbar-brand" href="{{"/"}}">{{ site.title | escape }}</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       Menu
       <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{{"/"}}">Əsas Səhifə</a>
-        </li>
-       <!-- Video Dropdown -->
-        <li style="color: #28a745;" class="nav-item dropdown">
-          <a class="nav-link font-weight-bold dropdown-toggle" href="{{ "/videos" }}" id="navbardrop" data-toggle="dropdown">
-            Videolar
-          </a>
-          <div class="dropdown-menu" style="background-color:#7ec303;">
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="{{ "/videos" }}">Bütün Videolar</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">Ədəbiyyat</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="{{ "/videos/economy.html" }}">İqtisadiyyat </a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">İT</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="{{ "/videos/eduabroad.html" }}">Xaricdə Təhsil</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">Psixologiya</a>
-          </div>     
-        </li>
-         <!-- End of Video Dropdown -->
-        <!-- Article Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link font-weight-bold dropdown-toggle" href="{{ "/posts" }}" id="navbardrop" data-toggle="dropdown">
-            Məqalələr
-          </a>
-          <div class="dropdown-menu" style="background-color:#7ec303;">
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="{{ "/posts" }}">Bütün Məqalələr</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">Ədəbiyyat</a>
-            <a style="color:white; font-size:12px;"class="dropdown-item" href="#">İqtisadiyyat </a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">İT</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">Xaricdə Təhsil</a>
-            <a style="color:white; font-size:12px;" class="dropdown-item" href="#">Psixologiya</a>
-          </div>     
-        </li>
-         <!-- End of Article Dropdown -->
-        <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{{"/events"}}">Tədbirlər</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{{"/about"}}">Haqqımızda</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{{ "/partnership" }}">Əməkdaşlıq</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link font-weight-bold" href="{{"/contact"}}">Əlaqə</a>
-        </li>
-        <li class="nav-item">
-            <!--<i class="nav-link fas fa-search"></i> -->
-            <!--<div class="search-box"> -->
-		<!--	<script async src="https://cse.google.com/cse.js?cx=006956435325746359751:53dmzemhe0e"></script>
-		<div class="gcse-searchbox-only"></div> -->
- 	   <!--</div> -->
-         </li>
-        
-      </ul>
-    </div>
-  </div>
+      </button>
+      <div class="container">
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/"}}">Əsas Səhifə</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/"}}">Azərbaycan Dili</a>
+               </li>
+               <!-- Video Dropdown -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link font-weight-bold dropdown-toggle" href="{{ "/videos" }}" id="navbardrop" data-toggle="dropdown">
+                  Ədəbiyyat
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="{{ "/videos" }}"> Nağıllar </a>
+                     <a class="dropdown-item" href="#"> Ədəbiyyat</a>
+                     <a class="dropdown-item" href="#"> Kitablar  </a>
+                  </div>
+               </li>
+               <!-- End of Video Dropdown -->
+               <!-- Article Dropdown -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link font-weight-bold dropdown-toggle" href="{{ "/posts" }}" id="navbardrop" data-toggle="dropdown">
+                  İKT
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="{{ "/posts" }}">Bütün Məqalələr</a>
+                     <a class="dropdown-item" href="#">Ədəbiyyat</a>
+                     <a class="dropdown-item" href="#">İqtisadiyyat </a>
+                     <a class="dropdown-item" href="#">İT</a>
+                     <a class="dropdown-item" href="#">Xaricdə Təhsil</a>
+                     <a class="dropdown-item" href="#">Psixologiya</a>
+                  </div>
+               </li>
+               <!-- End of Article Dropdown -->
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/events"}}">İqtisadiyyat</a>
+               </li>
+            </ul>
+         </div>
+         <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link font-weight-bold dropdown-toggle" href="{{ "/videos" }}" id="navbardrop" data-toggle="dropdown">
+                  Xaricdə Təhsil
+                  </a>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="{{ "/videos" }}"> İmtahanlar  </a>
+                     <a class="dropdown-item" href="#"> Ölkələr </a>
+                     <a class="dropdown-item" href="#"> Təqaüdlər </a>
+                  </div>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/about"}}">Psixologiya</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/about"}}">Haqqımızda</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{ "/partnership" }}">Əməkdaşlıq</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link font-weight-bold" href="{{"/contact"}}">Əlaqə</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
 </nav>
-
 
