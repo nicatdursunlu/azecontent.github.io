@@ -14,12 +14,12 @@
 		        //console.log(item_url);
 		        console.log(item);
             if(item_video_link){
-              appendString += '<div class="col-lg-4 col-sm-6 mb-4"><article class="card shadow h-100"> <a href="{{' +  item.url   +  '}}"><img class="rounded card-img-top" src="https://img.youtube.com/vi/' + item.video_link + '/mqdefault.jpg" style="height: 10rem;">  </a> <div class="card-body" > <a href=" ' + item.url   + '"> <h4 class="card-title font-weight-bold line-clamp module">' +  item.title  + '</h4> </a>  </div> </article></div>'
+              appendString += '<div class="col-lg-4 col-sm-6 mb-4"><article class="card shadow h-100"> <a href="' +  item.url   +  '"><img class="rounded card-img-top" src="https://img.youtube.com/vi/' + item.video_link + '/mqdefault.jpg" style="height: 10rem;">  </a> <div class="card-body" > <a href=" ' + item.url   + '"> <h4 class="card-title font-weight-bold line-clamp module">' +  item.title  + '</h4> </a>  </div> </article></div>'
               console.log(appendString);
             }else{
               //console.log(appendString);
               //console.log("here");
-              appendString += '<div class="col-lg-4 col-sm-6 mb-4"><article class="card shadow h-100"> <a href="{{' +  item.url   +  '}}"><img class="rounded card-img-top" src="' + item.background + '" style="height: 10rem;">  </a> <div class="card-body" > <a href=" ' + item.url   + '"> <h4 class="card-title font-weight-bold line-clamp module">' +  item.title  + '</h4> </a>  </div> </article></div>'
+              appendString += '<div class="col-lg-4 col-sm-6 mb-4"><article class="card shadow h-100"> <a href="' +  item.url   +  '"><img class="rounded card-img-top" src="' + item.background + '" style="height: 10rem;">  </a> <div class="card-body" > <a href=" ' + item.url   + '"> <h4 class="card-title font-weight-bold line-clamp module">' +  item.title  + '</h4> </a>  </div> </article></div>'
             }	
       
       }
