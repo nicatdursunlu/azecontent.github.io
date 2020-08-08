@@ -6,7 +6,7 @@ title: Azərbaycan Dili
     <div class="card-deck">
         <!-- Home Post List -->
         {% for post in site.posts %}
-        {% if post.type == "azerbiajani" %}
+        {% if post.type == "azərbaycan_dili" %}
         <div class="col-lg-4 col-sm-6 mb-4">
             <article class="card shadow h-100">
                
@@ -14,7 +14,7 @@ title: Azərbaycan Dili
                   {% if post.video_link  %}
                   <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
                   {% else %}
-                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
+                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl  }}" style="height: 10rem;">
                   {% endif %}
                 </a>
                    
