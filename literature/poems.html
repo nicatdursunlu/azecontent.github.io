@@ -9,26 +9,7 @@ background: '/img/bg-post.jpg'
         <!-- Home Post List -->
         {% for post in site.posts %}
         {% if post.type == "ədəbiyyat" and post.categories contains 'şeirlər' %}
-        <div class="col-lg-4 col-sm-6 mb-4">
-            <article class="card shadow h-100">
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                  {% if post.video_link  %}
-                  <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
-                  {% else %}
-                  <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl  }}" style="height: 10rem;">
-                  {% endif %}
-                </a>
-              <div class="card-body" >
-                <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-                   <h4 class="card-title font-weight-bold line-clamp module">{{ post.title }}</h4>
-                </a>
-                <p class="post-meta">
-                  {{ post.date | date: '%m.%d.%Y' }}          
-                </p>
-            </div>    
-            </article>
-            <hr>
-        </div>
+            {% include article.html %}
         {% endif %}
         {% endfor %}
     </div>
