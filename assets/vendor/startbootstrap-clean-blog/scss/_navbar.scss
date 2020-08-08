@@ -39,6 +39,16 @@
   float: right;
 }
 
+.card-lift{
+
+}
+
+.card-lift:hover{
+//	transform: translateY(-20px);
+	transform:scale(1.08);
+	transition: all 0.15s ease;
+}
+
 
 
 
