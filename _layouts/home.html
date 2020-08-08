@@ -44,7 +44,7 @@ layout: default
         {% for post in site.posts limit : 18 %}
       
         <div class="col-lg-4 col-sm-6 mb-4">
-            <article class="card shadow h-100">
+            <article class="card shadow h-100 card-lift">
                 <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
                   {% if post.video_link  %}
                   <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
