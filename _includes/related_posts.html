@@ -24,7 +24,7 @@
                       {% if post.video_link  %}
                       <img class="rounded card-img-top"  src="https://img.youtube.com/vi/{{post.video_link}}/mqdefault.jpg" style="height: 10rem;">
                       {% else %}
-                      <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" style="height: 10rem;">
+                      <img class="rounded card-img-top"  src="{{ post.background | prepend: site.baseurl  }}" style="height: 10rem;">
                       {% endif %}
                     </a>
                   <div class="card-body" >
