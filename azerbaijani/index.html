@@ -7,7 +7,7 @@ title: Azərbaycan Dili
         <!-- Home Post List -->
         {% for post in site.posts %}
         {% if post.type == "azərbaycan_dili" %}
-            {{ include article.html}}
+            {% include article.html %}
         {% endif %}
         {% endfor %}
     </div>
