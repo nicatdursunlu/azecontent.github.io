@@ -67,12 +67,12 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        {% assign sameTagCount = 0 %}
+        {% assign cnt2 = 0 %}
         {% for post in site.posts limit  %}
             {% unless post.selected  %}
-                {% assign sameTagCount = sameTagCount | plus: 1 %}
+                {% assign cnt2 = cnt2 | plus: 1 %}
                       {% include article.html %}
-                {% if sameTagCount == 12 %}
+                {% if cnt2 == 12 %}
                 {% break %}
                 {% endif %}
             {% endunless %}
