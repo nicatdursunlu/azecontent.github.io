@@ -42,11 +42,17 @@ layout: default
       </div>
     <div class="card-deck">
       
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 12 %}
-          {% if post.selected   %}
-              {% include article.html %}
-          {% endif %}
+        <!-- Home Post List --> 
+      
+        {% assign cnt1 = 0 %}
+        {% for post in site.posts limit  %}
+            {% if post.selected  %}
+                {% assign cnt1 = cnt1 | plus: 1 %}
+                      {% include article.html %}
+                {% if cnt1 == 12 %}
+                {% break %}
+                {% endif %}
+            {% endif %}
         {% endfor %}
     </div>
       <hr>
@@ -61,10 +67,15 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 12 %}
-          {% unless post.selected %}
-              {% include article.html %}
-          {% endif %}
+        {% assign sameTagCount = 0 %}
+        {% for post in site.posts limit  %}
+            {% unless post.selected  %}
+                {% assign sameTagCount = sameTagCount | plus: 1 %}
+                      {% include article.html %}
+                {% if sameTagCount == 12 %}
+                {% break %}
+                {% endif %}
+            {% endunless %}
         {% endfor %}
     </div>
        <!-- Pager -->
