@@ -40,7 +40,8 @@ header.masthead {
       line-height: 1.1;
       display: block;
       margin: 10px 0 0;
-      @include sans-serif-font;
+   //   @include sans-serif-font;
+      font-family: 'Quicksand', sans-serif;
     }
     @media only screen and (min-width: 768px) {
       h1 {
@@ -61,13 +62,15 @@ header.masthead {
       font-size: 20px;
       font-weight: 600;
       margin: 10px 0 30px;
-      @include sans-serif-font;
+    //  @include sans-serif-font;
+      font-family: 'Quicksand', sans-serif;
     }
     .meta {
       font-size: 20px;
       font-weight: 300;
       font-style: italic;
-      @include serif-font;
+    //  @include serif-font;
+      font-family: 'Quicksand', sans-serif;
       a {
         color: $white;
       }
