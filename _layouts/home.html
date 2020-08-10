@@ -62,7 +62,7 @@ layout: default
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 12 %}
-          {% if post.selected == nil   %}
+          {% unless post.selected %}
               {% include article.html %}
           {% endif %}
         {% endfor %}
