@@ -35,14 +35,36 @@ layout: default
     </div>
   </header>
 
+  
+  <div class="container">
+      <div class="post-heading">
+         <h2 class="font-weight-bold mt-4">Seçilmiş Postlar</h2>
+      </div>
+    <div class="card-deck">
+      
+        <!-- Home Post List -->
+        {% for post in site.posts limit : 12 %}
+          {% if post.selected   %}
+              {% include article.html %}
+          {% endif %}
+        {% endfor %}
+    </div>
+      <hr>
+  </div>
+  
  
   <div class="container">
+      <div class="post-heading">
+         <h2 class="font-weight-bold mt-4">Ən son yazılar</h2>
+      </div>
     <div class="card-deck">
         {{ content }}
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 18 %}
-            {% include article.html %}
+        {% for post in site.posts limit : 12 %}
+          {% if post.selected == nil   %}
+              {% include article.html %}
+          {% endif %}
         {% endfor %}
     </div>
        <!-- Pager -->
