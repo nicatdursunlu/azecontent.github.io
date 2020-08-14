@@ -1,0 +1,200 @@
+<!-- Footer -->
+
+<hr>
+
+<footer class="bg-dark py-5">
+  <div class="container container-lg">
+    <div class="row">
+      <div class="col-md-4">
+        <a  href="{{"/"}}"> <img style="max-height: 150px;" src = "/img/Logo.png"> </img> </a>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline text-center">
+          {% if site.twitter_username %}
+          <li class="list-inline-item">
+            <a href="https://twitter.com/{{ site.twitter_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.facebook_username %}
+          <li class="list-inline-item">
+            <a style="color: #3b5998;" href="https://www.facebook.com/{{ site.facebook_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <li class="list-inline-item">
+            <a style="color: #0e76a8;" href="https://www.linkedin.com/company/{{ site.linkedin_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.github_username %}
+          <li class="list-inline-item">
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+          {% if site.youtube_username %}
+          <li  class="list-inline-item">
+            <a style="color:#FF0000;" href="https://www.youtube.com/channel/UCysif3A6J2_1IFqRhtZtpNw/featured">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <p class="copyright text-white">&copy; {{ 'now' | date: "%Y" }} {{ site.author }}.  All Rights Reserved.</p>
+      </div>
+      <div class="col-md-4">
+     <div class="subscribe-box">
+        <p class="text-white" id="subscribe-result" style="font-size: 15px;" >Want to know updates? </p>
+        
+            <form action="https://github.us10.list-manage.com/subscribe/post-json?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e&c=?"
+                method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate">
+                <input  type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email" required>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_e44c1f194bec93e238615469e_f6f826e769" tabindex="-1" value="">
+                </div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mc-button mt-3 ">
+               <!-- <div id="subscribe-result">
+                </div> -->
+            </form>
+    </div>
+</div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+
+$(document).ready(function () {
+  var $form = $('#mc-embedded-subscribe-form')
+  if ($form.length > 0) {
+    $('form input[type="submit"]').bind('click', function (event) {
+      if (event) event.preventDefault()
+      register($form)
+    })
+  }
+})
+
+function register($form) {
+  $('#mc-embedded-subscribe').val('Göndərilir...');
+  $.ajax({
+    type: $form.attr('method'),
+    url: $form.attr('action'),
+    data: $form.serialize(),
+    cache: false,
+    dataType: 'json',
+    contentType: 'application/json; charset=utf-8',
+    error: function (err) { alert('Serverə qoşulmaq mümkün olmadı. Xahiş edirik bir az sonra təkrar cəhd edin.') },
+    success: function (data) {
+      $('#mc-embedded-subscribe').val('Abunə Olun')
+      if (data.result === 'success') {
+        // Yeahhhh Success
+        console.log(data.msg)
+        $('#mce-EMAIL').css('borderColor', '#ffffff')
+        $('#subscribe-result').css('color', 'rgb(53, 114, 210)')
+        $('#subscribe-result').html('Abunə olduğunuz üçün təşəkkür edirik!')
+        $('#mce-EMAIL').val('')
+      } else {
+        // Something went wrong, do something to notify the user.
+        console.log(data.msg)
+        console.log(data.result)
+        
+        $('#mce-EMAIL').css('borderColor', '#ff8282')
+        $('#subscribe-result').css('color', '#ff8282')
+	if(data.msg.includes('Artıq')){
+		$('#subscribe-result').html('Siz artıq abunə olmusunuz.')
+	}else{
+	   $('#subscribe-result').html('Qeyd edilmiş email ünvanı səhvdir')	
+	}
+        
+      }
+    }
+  })
+};
+// <!-- url: 'https://github.us10.list-manage.com/subscribe/post?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e', -->
+// https://github.us10.list-manage.com/subscribe/post?u=d3e5280c3e7a5515f85231ac1&amp;id=ecc357885e
+
+</script>
+<style>
+
+.subscribe-box {
+    background: rgba(120,130,140,0.13);
+    padding: 25px;
+    border-radius: 4px;
+  }
+  .subscribe-btn{
+    background-color:#36be0d;
+    border:none;
+  } 
+
+
+//body {
+   // background-image: linear-gradient(120deg, rgb(209, 219, 233), rgb(240, 250, 243));
+  //  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 'Helvetica Neue', Arial, sans-serif;
+ //  height: 100vh;
+  //  width: 100vw;
+//}
+
+
+
+
+input {
+    border: 1px solid rgb(220, 219, 235);
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 10px;
+    color: #000;
+    transition: all .15s ease-in;
+}
+
+input[type=email] {
+    width: 100%;
+}
+
+input[type=submit] {
+    background-color: #36be0d;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+input[type=submit]::focus {
+    border: 1px solid #fff;
+}
+
+input:focus {
+    border-color: rgb(53, 114, 210);
+    box-shadow: 0px 0px 8px 2px rgba(53, 114, 210, .5);
+    outline: none;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+#subscribe-result p {
+    
+    margin-top: 35px;
+}
+</style>
