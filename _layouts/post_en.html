@@ -1,0 +1,113 @@
+---
+layout: article_view_en
+---
+
+<!-- Page Header -->
+
+ <div class="container">
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+          <div class="post-heading">
+            <h2 class="font-weight-bold mt-4">{{ page.title }}</h2>
+            {% if page.subtitle %}
+            <p class="subheading">{{ page.subtitle }}</p>
+            {% endif %}
+          </div>
+          <img class="img-fluid rounded"  src="{{ page.background | prepend: site.baseurl }}">
+         <hr>
+        </div>
+      </div>
+    </div>
+<div class="container"> 
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+
+        {{ content }}
+           <!-- Go to www.addthis.com/dashboard to customize your tools -->
+       <div class="d-flex flex-wrap">
+              <div class="mr-auto p-2">	
+                <p>{{ page.date | date: '%m.%d.%Y' }}</p>
+              </div>
+               <div class="mr-auto p-2">  
+                   <p id="pageviews"><i class="fa fa-eye" aria-hidden="true"></i> </p>
+	       </div>
+              <div class="p-2 mt-4">	
+                 <div class="addthis_inline_share_toolbox">
+                   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f1c76cf5834dcd8"></script>
+                 </div>
+              </div>
+        </div>
+        <hr>
+
+   
+        <h3 class="text-center font-weight-bold mt-5">Related Posts </h3>
+        <div class="card-deck">
+        <!-- Related Post List -->
+        {% include related_posts.html %} 
+        </div>
+	      <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://azecontent-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      
+      </div>
+    </div>    
+ </div>
+<script>
+ $.ajax({
+  url: '	https://azecontent.appspot.com/query?id=agxzfmF6ZWNvbnRlbnRyFQsSCEFwaVF1ZXJ5GICAgOjXh4EKDA', // Replace with SuperProxy Public endpoint
+  dataType: 'jsonp', // for cross-origin access
+
+  timeout: 1000 * 10, // 10 secs
+
+  success: function(data) {
+    displayPageviews(data.rows); // Do what ever you want.
+  },
+  error: function() {
+    console.log('Failed to load Pageviews!');
+  }
+});
+ function displayPageviews(rows) {
+  if (rows === undefined) {
+    return;
+  }
+
+  var curPath = decodeURI(window.location.pathname);
+  var curFile = decodeURI(curPath.slice(curPath.lastIndexOf('/') + 1)); // Sometimes posts will be moved.
+  
+  var len = rows.length;
+  var cnt = 0;
+  console.log(curPath);
+  console.log(curFile);
+  for (var i = 0; i < len; ++i) {
+    var gaPath = rows[i][0];
+    var gaFile = gaPath.slice(gaPath.lastIndexOf('/') + 1);
+    console.log('inside loop');
+    console.log(gaPath);
+    console.log(gaFile);
+
+    if (gaPath === curPath || gaFile === curFile) {
+      cnt += parseInt(rows[i][1]);
+    }
+  }
+
+  $('#pageviews').append(cnt);
+}
+</script> 
