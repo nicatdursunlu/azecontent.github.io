@@ -5,6 +5,8 @@ description_en:     Let's improve in our language!
 
 author:             AzeContent
 baseurl:            /
+baseurl_en:         /en/
+
 url:                "https://azecontent.github.io"
 
 # Social Profiles
