@@ -1,6 +1,8 @@
 title:              AzeContent
 email:              azecontent@gmail.com
 description:        Öz dilimizdə inkişaf edək!
+description_en:     Let's improve in our language!
+
 author:             AzeContent
 baseurl:            /
 url:                "https://azecontent.github.io"
