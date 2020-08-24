@@ -1,0 +1,34 @@
+---
+layout: page_en
+title: Azerbaijani
+
+---
+<div class="container">
+    <div class="card-deck">
+        <!-- Home Post List -->
+        {% for post in site.posts %}
+        {% if post.type == "azərbaycan_dili" %}
+            {% include article.html %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<hr>
+
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+
+<div class="clearfix">
+
+  {% if paginator.previous_page %}
+  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+    Yeni<span class="d-none d-md-inline"> Məqalələr</span></a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Köhnə<span class="d-none d-md-inline"> Məqalələr</span> &rarr;</a>
+  {% endif %}
+</div>
+
+{% endif %}
