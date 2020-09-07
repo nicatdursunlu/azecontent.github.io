@@ -4,10 +4,10 @@ description:        Öz dilimizdə inkişaf edək!
 description_en:     Let's improve in our language!
 
 author:             AzeContent
-baseurl:            /
+baseurl:            /azecontent.github.io/
 baseurl_en:         /en/
 
-url:                "https://azecontent.com"
+url:  
 
 # Social Profiles
 twitter_username:  
